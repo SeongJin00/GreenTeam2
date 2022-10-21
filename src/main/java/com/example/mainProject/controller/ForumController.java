@@ -42,7 +42,7 @@ public class ForumController {
                 String message2 = "숙소명 : " + ghInfo.getSMM_NAME();
                 model.addAttribute("message2", message2);
 
-                String message3 = "체크인 - 체크아웃 : " + booking.getChkin() + " - " + booking.getChkout();
+                String message3 = "체크인 - 체크아웃 : 2022/10/26 - 2022/10/27";
                 model.addAttribute("message3", message3);
             } else {
                 model.addAttribute("message", "예약 내역이 없습니다.");
