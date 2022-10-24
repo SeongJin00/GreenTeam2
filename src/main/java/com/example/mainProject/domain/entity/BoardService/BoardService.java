@@ -1,4 +1,4 @@
-package com.example.mainProject.BoardService;
+package com.example.mainProject.domain.entity.BoardService;
 
 import com.example.mainProject.domain.Board;
 
