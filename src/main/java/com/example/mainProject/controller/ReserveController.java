@@ -63,7 +63,7 @@ public class ReserveController {
 
 
     @Transactional
-    @GetMapping ("/user/reserve")
+    @GetMapping ("/reserve")
     public String userreserve(@AuthenticationPrincipal SecurityUser principal, Model model, GHInfo ghInfo) {
 
         //로그인 안했으면 로그인해라
@@ -79,6 +79,8 @@ public class ReserveController {
             booking.setMember(member);
             booking.setApi(ghInfo);
 
+//            booking.setChkin("2022/10/26");
+//            booking.setChkout("2022/10/27");
 
 
             ghInfo.getBookingList().add(booking);

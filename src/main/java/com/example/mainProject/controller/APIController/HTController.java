@@ -1,7 +1,7 @@
 package com.example.mainProject.controller.APIController;
 
 import com.example.mainProject.ApiService.HTService;
-import com.example.mainProject.domain.entity.BoardService.BoardService;
+import com.example.mainProject.config.BoardService.BoardService;
 import com.example.mainProject.domain.Board;
 import com.example.mainProject.dto.HTInfo;
 import org.springframework.beans.factory.annotation.Autowired;

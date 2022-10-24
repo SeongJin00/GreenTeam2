@@ -1,7 +1,7 @@
 package com.example.mainProject.controller;
 
 import com.example.mainProject.ApiService.GHService;
-import com.example.mainProject.domain.entity.BoardService.BoardService;
+import com.example.mainProject.config.BoardService.BoardService;
 import com.example.mainProject.domain.Board;
 import com.example.mainProject.dto.GHInfo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -105,16 +105,6 @@ public class ArticleController {
     @GetMapping("/testimonial")
     public String testimonialForm() {
         return "main/testimonial";
-    }
-
-    @GetMapping("/iconTest")
-    public String test() {
-        return "testCase/iconTest";
-    }
-
-    @GetMapping("/uiTest")
-    public String ui() {
-        return "forum/ui-tabs-pills";
     }
 
     @GetMapping("/errorPage")

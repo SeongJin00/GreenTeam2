@@ -1,13 +1,11 @@
 package com.example.mainProject.controller;
 
-import com.example.mainProject.domain.entity.BoardService.BoardService;
+import com.example.mainProject.config.BoardService.BoardService;
 import com.example.mainProject.domain.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @Controller
 public class BoardController {
@@ -23,13 +21,13 @@ public class BoardController {
     }
 
     //게시글목록
-    @RequestMapping("/getBoardList")
-    public String getBoardList(Model model, Board board) {
-        List<Board> boardList = boardService.getBoardList(board);
-
-        model.addAttribute("boardList", boardList);
-        return "getBoardList";
-    }
+//    @RequestMapping("/getBoardList")
+//    public String getBoardList(Model model, Board board) {
+//        List<Board> boardList = boardService.getBoardList(board);
+//
+//        model.addAttribute("boardList", boardList);
+//        return "getBoardList";
+//    }
 
     //----------CREATE---------
     //게시글 등록

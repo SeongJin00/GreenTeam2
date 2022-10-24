@@ -1,8 +1,59 @@
 <!DOCTYPE html>
-<html>
+
+
+<html
+        lang="en"
+        class="light-style"
+        dir="ltr"
+        data-theme="theme-default"
+        data-assets-path="../assets/"
+        data-template="vertical-menu-template-free"
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:sec="http://www.w3.org/1999/xhtml"
+
+>
 <head>
-  <meta charset="UTF-8">
-  <title>Insert title here</title>
+  <meta charset="utf-8" />
+  <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+  />
+
+  <title>예약 화면</title>
+
+  <meta name="description" content="" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="../assets/img/favicon/favicon.ico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+          href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet"
+  />
+
+  <!-- Icons. Uncomment required icon fonts -->
+  <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="../assets/vendor/css/core.css" class="template-customizer-core-css" />
+  <link rel="stylesheet" href="../assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+  <link rel="stylesheet" href="../assets/css/demo.css" />
+
+  <!-- Vendors CSS -->
+  <link rel="stylesheet" href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+
+  <!-- Page CSS -->
+  <!-- Page -->
+  <link rel="stylesheet" href="../assets/vendor/css/pages/page-misc.css" />
+  <!-- Helpers -->
+  <script src="../assets/vendor/js/helpers.js"></script>
+
+  <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+  <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+  <script src="../assets/js/config.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function(){
@@ -20,53 +71,46 @@
 
 
   </script>
+
 </head>
+
 <body>
-<h1 th:text="|${principal.name}님 예약이 완료되었습니다!!!!!!!!!!!!!|"></h1>
-<!--<h1>님 예약이 완료되었습니다!!!!!!!!!!!!!</h1>-->
+<!--<h1 th:text="|${principal.name}님 예약이 완료되었습니다!!!!!!!!!!!!!|"></h1>-->
+
+<!--Under Maintenance -->
+<div class="container-xxl container-p-y">
+  <div class="misc-wrapper">
+    <h2 class="mb-2 mx-2">예약 성공!</h2>
+    <p class="mb-4 mx-2" th:text="|${principal.name}님의 예약이 완료되었습니다.|">
+      <label class="form-label" th:text="${message2}"></label>
+    </p>
+    <a href="profile" class="btn btn-primary">예약 정보 확인하기</a>
+    <div class="mt-4">
+      <img src="../assets/img/illustrations/light.png" alt="light" width="500" class="img-fluid" data-app-dark-img="illustrations/light.png" data-app-light-img="illustrations/light.png">
+    </div>
+  </div>
+</div>
 
 
-<!--<table>-->
-<!--  <tr>-->
-<!--    <th>출발지</th><th>도착지</th><th>출발날짜</th><th>출도착시간</th><th>편명</th><th>좌석클래스</th><th>결제금액</th>-->
-<!--  </tr>-->
 
-<!--  <tr>-->
-<!--    <td>인천 (ICN)</td>-->
-<!--    <td>-->
-<!--      <c:choose>-->
-<!--        <c:when test="${complete.l_code eq 'CJU' }">제주</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'NPT' }">도쿄</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'KIX' }">오사카</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'FUK' }">후쿠오카</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'HKG' }">홍콩</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'BKK' }">방콕</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'BKI' }">코타키나발루</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'WO' }">블라디보스토크</c:when>-->
-<!--        <c:when test="${complete.l_code eq 'JFK' }">뉴욕</c:when>-->
-<!--        <c:otherwise> ... </c:otherwise>-->
-<!--      </c:choose>(${complete.l_code })-->
-<!--    </td>-->
-<!--    <td>${complete.o_sdate }</td>-->
-<!--    <td>${complete.start } ~ ${complete.end }<br>(${complete.time })</td>-->
-<!--    <td>${complete.a_name }</td>-->
-<!--    <td>-->
-<!--      <c:choose>-->
-<!--        <c:when test="${complete.grade eq 'E' }">Economy(일반석)</c:when>-->
-<!--        <c:when test="${complete.grade eq 'B' }">Business(이등석)</c:when>-->
-<!--        <c:when test="${complete.grade eq 'F' }">First(일등석)</c:when>-->
-<!--      </c:choose>-->
-<!--    </td>-->
-<!--    <td>-->
-<!--      <fmt:formatNumber value="${complete.pay }" pattern="#,###" /> KRW-->
-<!--    </td>-->
-<!--  </tr>-->
-<!--</table>-->
-<!--<br>-->
-<!--<br>-->
-<!--<input type="button" value="나의예약정보" id="btnMyBook">-->
+<!-- Core JS -->
+<!-- build:js assets/vendor/js/core.js -->
+<script src="../assets/vendor/libs/jquery/jquery.js"></script>
+<script src="../assets/vendor/libs/popper/popper.js"></script>
+<script src="../assets/vendor/js/bootstrap.js"></script>
+<script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
 
-<!--<input type="button" value="확인" id="btnhome">-->
+<script src="../assets/vendor/js/menu.js"></script>
+<!-- endbuild -->
 
+<!-- Vendors JS -->
+
+<!-- Main JS -->
+<script src="../assets/js/main.js"></script>
+
+<!-- Page JS -->
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </body>
 </html>

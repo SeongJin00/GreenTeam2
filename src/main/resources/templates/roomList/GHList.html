@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>방방곡곡</title>
+    <title>방방곡곡 | 게스트하우스</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -39,6 +39,8 @@
 </head>
 
 <body>
+
+
 <div class="container-xxl bg-white p-0">
     <!-- Spinner Start -->
     <div id="spinner"
@@ -159,7 +161,7 @@
                 <h6 class="section-title text-center text-primary text-uppercase">추천 숙소</h6>
                 <h2 class="mb-5">한옥 체험 <span class="text-primary text-uppercase">게스트 하우스</span></h2>
             </div>
-            <div class="row g-4" th:each="ghInfoList, state:${ghInfoList}">
+            <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s" >
                     <div class="room-item shadow rounded overflow-hidden">
                         <div class="position-relative">
@@ -168,7 +170,7 @@
                         </div>
                         <div class="p-4 mt-2">
                             <div class="d-flex justify-content-between mb-3">
-                                <h5 class="mb-0" th:text="${ghInfoList.SMM_NAME}">남현당</h5>
+                                <h5 class="mb-0">남현당</h5>
                                 <div class="ps-2">
                                     <small class="fa fa-star text-primary"></small>
                                     <small class="fa fa-star text-primary"></small>
@@ -187,7 +189,7 @@
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="getGH?SMM_SEQ=92">정보 보기</a>
 <!--                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=92">예약하기</a>-->
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" th:href="@{/getGH(SMM_SEQ=${ghInfoList.SMM_SEQ})}">예약하기</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=92">예약하기</a>
                             </div>
                         </div>
                     </div>
@@ -218,7 +220,7 @@
                             <p class="text-body mb-3">서울 종로구 필운대로3길 12</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="getGH?SMM_SEQ=99">정보 보기</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">예약하기</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=99">예약하기</a>
                             </div>
                         </div>
                     </div>
@@ -249,7 +251,7 @@
                             <p class="text-body mb-3">서울 종로구 율곡로8길 67</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="getGH?SMM_SEQ=170">정보 보기</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">예약하기</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=170">예약하기</a>
                             </div>
                         </div>
                     </div>
@@ -280,7 +282,7 @@
                             <p class="text-body mb-3">서울 종로구 계동길 49-20</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="getGH?SMM_SEQ=23">정보 보기</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">예약하기</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=23">예약하기</a>
                             </div>
                         </div>
                     </div>
@@ -311,7 +313,7 @@
                             <p class="text-body mb-3">서울 종로구 자하문로5가길 26-1</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="getGH?SMM_SEQ=214">정보 보기</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">예약하기</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=214">예약하기</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +344,7 @@
                             <p class="text-body mb-3">서울 종로구 자하문로 33-7</p>
                             <div class="d-flex justify-content-between">
                                 <a class="btn btn-sm btn-primary rounded py-2 px-4" href="getGH?SMM_SEQ=279">정보 보기</a>
-                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="">예약하기</a>
+                                <a class="btn btn-sm btn-dark rounded py-2 px-4" href="getGH?SMM_SEQ=279">예약하기</a>
                             </div>
                         </div>
                     </div>
@@ -422,7 +424,6 @@
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="index">홈</a>
                         </div>
                     </div>
                 </div>

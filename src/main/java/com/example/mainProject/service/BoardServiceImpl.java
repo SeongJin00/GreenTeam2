@@ -1,6 +1,6 @@
 package com.example.mainProject.service;
 
-import com.example.mainProject.domain.entity.BoardService.BoardService;
+import com.example.mainProject.config.BoardService.BoardService;
 import com.example.mainProject.domain.Board;
 import com.example.mainProject.persistence.BoardRepository;
 

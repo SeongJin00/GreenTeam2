@@ -78,6 +78,7 @@ public class MemberController {
     public String dispLoginResult() {
         return "/user/loginSuccess";
     }
+
     // 접근 거부 페이지
     @GetMapping("/user/denied")
     public String dispDenied() {
@@ -85,11 +86,6 @@ public class MemberController {
     }
 
 
-    // 어드민 페이지
-    @GetMapping("/admin")
-    public String dispAdmin() {
-        return "/admin";
-    }
 
 
 }
