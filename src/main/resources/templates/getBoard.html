@@ -251,7 +251,7 @@
 
                                     <div class="col-12">
                                         <br>
-                                            <a th:href="@{/board/modify/{seq}(seq = ${board.seq})}"
+                                            <a th:href="@{/modify{seq}(seq=${board.seq})}"
                                                class="btn btn-primary">글 수정</a>&nbsp;&nbsp;&nbsp;
                                             <a th:href="@{/deleteBoard(seq=${board.seq})}" class="btn btn-danger">글
                                                 삭제</a>

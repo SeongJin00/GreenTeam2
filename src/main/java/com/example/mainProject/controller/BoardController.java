@@ -1,11 +1,13 @@
 package com.example.mainProject.controller;
 
-import com.example.mainProject.config.BoardService.BoardService;
+import com.example.mainProject.BoardService.BoardService;
 import com.example.mainProject.domain.Board;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 public class BoardController {
@@ -45,7 +47,7 @@ public class BoardController {
 
     //----------UPDATE---------
     //게시글 수정
-    @GetMapping("/board/modify/{seq}")
+    @GetMapping("/modify{seq}")
     public String boardModify(Board board, Model model) {
         model.addAttribute("board", boardService.boardView(board));
         return "boardModify";

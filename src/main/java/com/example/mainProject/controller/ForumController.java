@@ -1,16 +1,20 @@
 package com.example.mainProject.controller;
 
-import com.example.mainProject.config.BoardService.BoardService;
+import com.example.mainProject.BoardService.BoardService;
 import com.example.mainProject.config.SecurityUser;
 import com.example.mainProject.domain.Board;
 import com.example.mainProject.domain.entity.Booking;
+import com.example.mainProject.domain.entity.MemberEntity;
 import com.example.mainProject.dto.GHInfo;
 import com.example.mainProject.service.MemberService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
 

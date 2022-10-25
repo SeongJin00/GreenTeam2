@@ -248,7 +248,7 @@
                                                 <i class="bx bx-dots-vertical-rounded"></i>
                                             </button>
                                             <ul class="dropdown-menu dropdown-menu-end">
-                                                <li><a th:href="@{/board/modify/{seq}(seq = ${board.seq})}" class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-2"></i>수정</a></li>
+                                                <li><a th:href="@{/modify{seq}(seq = ${board.seq})}" class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-2"></i>수정</a></li>
                                                 <li><a th:href="@{/deleteBoard(seq=${board.seq})}" class="dropdown-item" href=""><i class="bx bx-trash me-2"></i>삭제</a></li>
                                             </ul>
                                         </div>
