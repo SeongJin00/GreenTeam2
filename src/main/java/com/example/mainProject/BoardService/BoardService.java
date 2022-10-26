@@ -1,4 +1,4 @@
-package com.example.mainProject.config.BoardService;
+package com.example.mainProject.BoardService;
 
 import com.example.mainProject.domain.Board;
 
